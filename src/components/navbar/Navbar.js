@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">BeyondChats</Link>
         <div className="navbar-links">
-          <Link to="/" className="navbar-link">Registration</Link>
+          <Link to="/registration" className="navbar-link">Register</Link>
           <Link to="/setup-organisation" className="navbar-link">Organisation Setup</Link>
           <Link to="/chatbot-integration" className="navbar-link">Chatbot Integration</Link>
         </div>

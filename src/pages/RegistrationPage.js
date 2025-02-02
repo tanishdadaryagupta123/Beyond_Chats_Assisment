@@ -1,52 +1,76 @@
 import React, { useState } from 'react';
-import './styles/RegistrationPage.css';
+import './RegistrationPage.css';
 
 const RegistrationPage = () => {
-  const [emailVerified, setEmailVerified] = useState(false);
-  const [verificationCode, setVerificationCode] = useState('');
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    password: ''
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Registration submitted');
-    setEmailVerified(true); // Simulate email verification
-  };
-
-  const handleVerification = (e) => {
-    e.preventDefault();
-    console.log('Verification code submitted:', verificationCode);
-    // Simulate verification success (replace with redirect logic in production)
+    console.log('Form submitted:', formData);
   };
 
   return (
     <div className="registration-container">
-      <div className="form-card">
-        <h1>{emailVerified ? 'Verify Your Email' : 'User Registration'}</h1>
-        {!emailVerified ? (
-          <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="Name" required />
-            <input type="email" placeholder="Email" required />
-            <input type="password" placeholder="Password" required />
-            <button type="submit" className="primary-btn">
-              Register
-            </button>
-          </form>
-        ) : (
-          <form onSubmit={handleVerification}>
+      <div className="registration-box">
+        <h1>Create Account</h1>
+        <p className="subtitle">Get started with BeyondChats</p>
+        
+        <form onSubmit={handleSubmit}>
+          <div className="input-group">
             <input
               type="text"
-              placeholder="Enter verification code"
-              value={verificationCode}
-              onChange={(e) => setVerificationCode(e.target.value)}
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Full Name"
               required
             />
-            <button type="submit" className="primary-btn">
-              Verify
-            </button>
-          </form>
-        )}
-        <button className="google-btn">
-          <span className="google-icon">G</span> Continue with Google
-        </button>
+          </div>
+
+          <div className="input-group">
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Email Address"
+              required
+            />
+          </div>
+
+          <div className="input-group">
+            <input
+              type="password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              placeholder="Password"
+              required
+            />
+          </div>
+
+          <button type="submit" className="submit-btn">
+            Sign Up
+          </button>
+        </form>
+
+        <div className="social-login">
+          <span className="divider">or</span>
+          <button className="google-btn">
+            Continue with Google
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -27,7 +27,7 @@
 .navbar-logo {
     font-size: 28px; /* Increased font size for better visibility */
     font-weight: bold;
-    color: rgb(255, 255, 255);
+    color: white;
     text-decoration: none;
     letter-spacing: 2px;
     transition: color 0.3s;
@@ -128,4 +128,10 @@
     .navbar-chatbot {
         margin-top: 0; /* No extra space above chatbot */
     }
+}
+
+/* Specific style for Register link */
+.navbar-links a[href="/registration"] {
+    color: white;
+    font-weight: 500;
 }
