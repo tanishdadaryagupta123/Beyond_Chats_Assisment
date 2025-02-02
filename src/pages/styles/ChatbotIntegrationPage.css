@@ -1,0 +1,214 @@
+/* src/styles/ChatbotIntegrationPage.css */
+
+.chatbot-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 100px; /* Adjusted top margin to avoid navbar overlap */
+}
+
+.top-bar {
+  background-color: #ffcb05;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: #004460;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.top-bar a {
+  color: #004460;
+  text-decoration: underline;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #005f87;
+}
+
+.buttons-section {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-test-chatbot {
+  background-color: #00a1ff;
+  color: white;
+}
+
+.btn-test-chatbot:hover {
+  background-color: #005f87;
+}
+
+.btn-integrate-chatbot {
+  background-color: #ffcb05;
+  color: #004460;
+}
+
+.btn-integrate-chatbot:hover {
+  background-color: #00a1ff;
+  color: white;
+}
+
+.integration-options {
+  margin-top: 40px;
+}
+
+.option {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.option h3 {
+  color: #005f87;
+}
+
+/* Added styling for <pre> tag inside .option to prevent overflow */
+.option pre {
+  background-color: #e0e0e0;
+  padding: 10px;
+  font-family: monospace;
+  color: #004460;
+  white-space: pre-wrap; /* Allows text to wrap within the container */
+  overflow-wrap: break-word; /* Ensures words break if too long */
+  max-width: 100%; /* Ensures it stays within the container */
+  box-sizing: border-box; /* Ensures padding is included in width calculation */
+  word-break: break-word; /* Forces long words to break */
+}
+
+.option code {
+  display: block; /* Makes the code block occupy full width */
+  max-width: 100%; /* Ensures code block doesn't exceed container width */
+  overflow-x: auto; /* Allows horizontal scroll if necessary */
+  padding: 15px; /* Adds some padding for visual balance */
+  background-color: #f9f9f9; /* Slightly different background to differentiate */
+  border-radius: 5px; /* Rounds the corners of the code block */
+  color: #004460; /* Color of the text inside the code block */
+  font-size: 14px; /* Adjusts the font size */
+}
+
+.btn-email-developer {
+  background-color: #004460;
+  color: white;
+}
+
+.btn-email-developer:hover {
+  background-color: #00a1ff;
+}
+
+@media (max-width: 768px) {
+  .buttons-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Add new styling for success and failure UI */
+/* Add new styling for success and failure UI */
+.success-ui, .failure-ui {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.success-ui p {
+  font-size: 20px;
+  color: green;
+}
+
+.failure-ui p {
+  font-size: 20px;
+  color: red;
+}
+
+.success-ui button, .failure-ui button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Ensure there is space between buttons on desktop */
+.success-ui .btn-success {
+  margin: 10px;
+}
+
+.btn-success {
+  background-color: #00a1ff;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #005f87;
+}
+
+.btn-retry {
+  background-color: #ffcb05;
+  color: #004460;
+}
+
+.btn-retry:hover {
+  background-color: #00a1ff;
+  color: white;
+}
+
+.btn-contact-support {
+  background-color: #004460;
+  color: white;
+}
+
+.btn-contact-support:hover {
+  background-color: #00a1ff;
+}
+
+.social-share {
+  margin-top: 20px;
+}
+
+.btn-social {
+  background-color: #1da1f2; /* Twitter color */
+  color: white;
+  margin-right: 10px;
+}
+
+.btn-social:hover {
+  background-color: #005f87;
+}
+
+.btn-social:nth-child(2) {
+  background-color: #3b5998; /* Facebook color */
+}
+
+.btn-social:nth-child(2):hover {
+  background-color: #005f87;
+}
+
+/* Ensure buttons are properly spaced on desktop */
+@media (min-width: 768px) {
+  .success-ui .btn-success {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .buttons-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

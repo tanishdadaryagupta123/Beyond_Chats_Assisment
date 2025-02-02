@@ -1,0 +1,124 @@
+/* Global container styling */
+.registration-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e3b025, #4d45e8);
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+/* Card styling for form */
+.form-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading */
+.form-card h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #4a4a4a;
+}
+
+/* Input fields */
+.form-card input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-card input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+/* Primary button */
+.primary-btn {
+  width: 100%;
+  padding: 12px;
+  background: #5e93c8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.primary-btn:hover {
+  background-color: #6ae94d;
+  transform: translateY(-3px);
+}
+
+.primary-btn:active {
+  transform: translateY(1px);
+}
+
+/* Google button */
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db4437;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.google-btn:hover {
+  background-color: #28c8b3;
+}
+
+.google-icon {
+  background-color: white;
+  color: #1595bc;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 8px;
+  margin-right: 8px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .form-card {
+    padding: 20px;
+    margin: 0 10px;
+  }
+
+  .form-card h1 {
+    font-size: 20px;
+  }
+
+  .form-card input,
+  .primary-btn,
+  .google-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

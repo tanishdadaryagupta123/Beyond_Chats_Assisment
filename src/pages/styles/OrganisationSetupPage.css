@@ -1,0 +1,85 @@
+/* src/pages/styles/OrganisationSetupPage.css */
+
+.organisation-container {
+  padding-top: 100px;  /* Increased padding to prevent content from hiding behind navbar */
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #005f87;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #004460;
+}
+
+.webpages-section {
+  margin-top: 40px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.page-item {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.page-item:hover {
+  background-color: #f4f4f4;
+}
+
+.status {
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.status.scraped {
+  background-color: #28a745;
+  color: white;
+}
+
+.status.pending {
+  background-color: #ffc107;
+  color: white;
+}
+
+.page-name {
+  font-size: 1rem;
+}
