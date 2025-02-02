@@ -12,10 +12,11 @@ const App = () => {
       <Navbar />  {/* Add Navbar to the app layout */}
       <div style={{ paddingTop: '80px' }}> {/* Account for navbar height */}
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route exact path="/" element={<HomePage />} />
           <Route path="/registration" element={<RegistrationPage />} />
           <Route path="/setup-organisation" element={<OrganisationSetupPage />} />
           <Route path="/chatbot-integration" element={<ChatbotIntegrationPage />} />
+          <Route path="*" element={<HomePage />} /> {/* Add catch-all route */}
         </Routes>
       </div>
     </Router>
